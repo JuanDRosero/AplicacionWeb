@@ -1,0 +1,65 @@
+﻿@model AplicacionWeb.Models.RegistroViewModel
+
+@{
+    ViewData["Title"] = "Ver";
+}
+
+<h1>Mis datos</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.persona.Identificacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.persona.Identificacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.persona.PrimerNombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.persona.PrimerNombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.persona.SegundoNombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.persona.SegundoNombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.persona.PrimerApellido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.persona.PrimerApellido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.persona.SegundoApellido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.persona.SegundoApellido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.persona.Edad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.persona.Edad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.usuario.Usuario1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.usuario.Usuario1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.usuario.Contraseña)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.usuario.Contraseña)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Editar" asp-route-id="@Context.Session.GetInt32("ID")">Editar</a> |
+    <a asp-action="Index">Regresar</a>
+</div>

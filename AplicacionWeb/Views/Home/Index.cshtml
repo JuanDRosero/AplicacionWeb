@@ -1,0 +1,26 @@
+﻿@model Usuario
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout - Inicial.cshtml";
+}
+<form class="form-signin bg-gradient" method="post" asp-action="Ingresar">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    @if (!String.IsNullOrEmpty(Context.Session.GetString("Error")))
+    {
+      <div class="alert alert-danger alert-dismissible" role="alert">
+       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+       @Context.Session.GetString("Error")
+    </div>
+    }
+    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="57" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/>
+    </svg>
+    <h1 class="h3 mb-3 font-weight-normal">Inicie Sesion</h1>
+    <input  name="usuario" class="form-control" placeholder="Usuario" required autofocus/>
+    <input type="password" name="contraseña" class="form-control" placeholder="Contraseña" required />
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Ingresar</button>
+    <div class="text-center my-3">
+        <p>¿No tiene un usuario?</p>
+        <a asp-controller="Home" asp-action="Registrar">Registrese ahora</a>
+    </div>
+</form>

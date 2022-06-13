@@ -1,0 +1,61 @@
+﻿@model AplicacionWeb.Models.ListaViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista Familiares</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Identificiación
+            </th>
+            <th>
+                Primer Nombre
+            </th>
+            <th>
+                Segundo Nombre
+            </th>
+            <th>
+                Primer Apellido
+            </th>
+            <th>
+                Segundo Apellido
+            </th>
+            <th>
+                Edad
+            </th>
+            <th>Relación</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.familiares) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Identificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimerNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SegundoNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimerApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SegundoApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>Model.relaciones.Where(x=>x.Id==item.Relacion).First().Descripcion)
+            </td>
+        </tr>
+}
+    </tbody>
+    <a asp-action="AgregarF" class="btn btn-primary">Agregar familiar</a>
+</table>
