@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ * Clase de Entity autogenerada para la tabla de Parentesco
+ */
+using System;
 using System.Collections.Generic;
 
 namespace AplicacionWeb.Models

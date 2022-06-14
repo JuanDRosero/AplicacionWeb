@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿/*
+ * Clase para facilitar la validación del registro de un usuario
+ */
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace AplicacionWeb.Models

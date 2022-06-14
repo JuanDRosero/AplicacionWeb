@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ * Clase autogenerada de entity para la tabla Usuarios
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 

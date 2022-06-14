@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ * Clase autogenerada de Entity para la conexión a la Base de Datos
+ */
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;

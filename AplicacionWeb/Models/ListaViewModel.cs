@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿/*
+ * Vista para facilitar la visualización de los familiares de una persona
+ */
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AplicacionWeb.Models
 {

@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ * Clase autogenerada de entity para la tabla Tipos
+ */
+using System;
 using System.Collections.Generic;
 
 namespace AplicacionWeb.Models

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Clase autogenerada de entity para la tabla Personas
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 

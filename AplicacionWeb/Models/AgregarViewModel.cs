@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿/*
+ * Clase para facilitar la validación del registro para agregar un familiar
+ */
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace AplicacionWeb.Models
 {
+    
     public class AgregarViewModel
     {
         public int Id { get; set; }
