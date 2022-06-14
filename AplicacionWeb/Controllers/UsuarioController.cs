@@ -79,10 +79,12 @@ namespace AplicacionWeb.Controllers
                 modelo.tipos = tp;
                 return View(modelo);
             }
+            modelo.persona.TipoI = Int32.Parse(modelo.tipo);
             _contex.Personas.Update(modelo.persona);    //Actualización de la persona
+            modelo.usuario.Persona = HttpContext.Session.GetInt32("ID");
             _contex.Usuarios.Update(modelo.usuario);    //Actualización del usuario
             await _contex.SaveChangesAsync();
-            return RedirectToAction("Ver");             //Redireción a la vista principal
+            return RedirectToAction("Index");             //Redireción a la vista principal
         }
         [HttpGet]
         public IActionResult AgregarF()
